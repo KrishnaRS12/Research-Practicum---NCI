@@ -51,7 +51,7 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
 | **LSTM**                         | 0.054     | 0.86   | 0.70   | Baseline sequential model |
 | **BiLSTM**                       | 0.061     | 0.85   | 0.68   | Better capture of bidirectional temporal patterns |
 | **BiGRU**                        | 0.065     | 0.85   | 0.68   | Lighter recurrent alternative with similar performance |
-| **BiLSTM + Attention**           | **0.073** | 0.84   | 0.67   | ✅ Best performing model overall |
+| **BiLSTM + Attention**           | **0.073** | 0.84   | 0.67   | Best performing model overall |
 | **Informer + CBAM**              | 0.068     | 0.85   | 0.68   | Effective at long-sequence modeling |
 | **Spatio-Temporal CBAM Attention** | 0.069   | 0.85   | 0.67   | Close second; slightly lower MAE |
 
