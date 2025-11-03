@@ -43,4 +43,8 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
       1. Crime dataset (Chicago Open Data Portal): https://drive.google.com/file/d/1KZzHzDKm8kTE5amHTQDOmHRVMD3rN_qW/view?usp=drive_link
       2. Weather data (NOAA/Chicago): https://docs.google.com/spreadsheets/d/15jJ3_ix0WoLxUaaCUEXZvB8Gi0Yiv98I/edit?usp=drive_link&ouid=118004913183445890400&rtpof=true&sd=true
 
+### Notes
 
+      - The code uses TensorFlow 2.17, Keras, and LIME for model training and interpretation.
+      - All preprocessing steps, feature engineering, and model evaluations are included in the Jupyter notebook.
+      - ARIMA and SARIMAX were tested separately but excluded due to poor performance (constant future values).
