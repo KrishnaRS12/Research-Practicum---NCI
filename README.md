@@ -1,5 +1,32 @@
 # Research-Practicum---NCI
 ## SpatioTemporal_CrimeForecast
+Forecast daily theft counts for Chicago Community Area 28 using deep learning with exogenous weather & calendar signals. The project compares LSTM-family baselines with attention-augmented architectures and integrates LIME for model explainability.
+
+Scope: The work intentionally focuses on one community area (Area 28) and one crime type (THEFT) to keep the spatial distribution consistent, reduce heterogeneity, and clearly analyze temporal patterns and model behavior.
+
+### Features
+  - Data pipeline:
+    
+        1. Daily aggregation of crimes with lags (t−1, t−7)
+        2. Rolling weekday/month/weekend averages
+        3. Weekend & US holiday indicators
+        4. Merge with daily weather (temperature, humidity, wind speed) and Discomfort Index (DI)
+    
+  - Models:
+    
+        1. LSTM, BiLSTM, BiGRU
+        2. BiLSTM + Attention (temporal attention)
+        3. BiLSTM + CBAM + Informer (sparse attention for long sequences + channel/spatial attention)
+        4. Spatio-Temporal CBAM Attention
+    
+  - Evaluation:
+    
+        1. MSE, RMSE, MAE, R²
+        2. Inference latency & throughput, memory usage, execution time
+    
+  - Explainability:
+    
+        1. LIME for local feature importance (verifies role of recent counts, lags, weekday patterns)
 
 ### Data Access
 Due to file size limits, the datasets are hosted externally.
