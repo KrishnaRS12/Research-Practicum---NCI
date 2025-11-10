@@ -44,16 +44,17 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
       2. Weather data (NOAA/Chicago): https://docs.google.com/spreadsheets/d/15jJ3_ix0WoLxUaaCUEXZvB8Gi0Yiv98I/edit?usp=drive_link&ouid=118004913183445890400&rtpof=true&sd=true
          
          
-### Results Summary
+### Results Summary 
 
-| Model | RMSE | MAE | Latency | Throughput | Memory Usage | Remarks |
-|:------|:----:|:----:|:--------:|:------------:|:--------------:|:---------|
-| **LSTM** | 0.86 | 0.70 | High | Low | Moderate | Baseline sequential model |
-| **BiLSTM** | 0.85 | 0.68 | Moderate | Moderate | Moderate | Better capture of bidirectional temporal patterns |
-| **BiGRU** | 0.85 | 0.68 | **Low** | **High** | **Low** | Most efficient recurrent alternative |
-| **BiLSTM + Attention** | **0.84** | **0.67** | Moderate | Moderate | Moderate | **Best-performing model overall** |
-| **Informer + CBAM** | 0.85 | 0.68 | Moderate | High | High | Effective for long-sequence modeling |
-| **Spatio-Temporal CBAM Attention** | 0.85 | **0.67** | Slightly higher | Moderate | High | Close second; strong MAE stability |
+| Model | RMSE | MAE | Latency (ms/pred) | Throughput (pred/s) | Execution Time (s) | Memory (MB) |
+|:--|--:|--:|--:|--:|--:|--:|
+| LSTM | 0.85 | 0.68 | 67.21 | 4078.34 | 0.41 | 6864.65 |
+| BiLSTM | 0.88 | 0.69 | 77.18 | 1309.10 | 1.10 | 6993.42 |
+| BiGRU | 0.85 | 0.68 | 74.79 | 1301.67 | 1.76 | 6923.67 |
+| BiLSTM + Attention | 0.84 | 0.68 | 74.06 | 1738.61 | 1.40 | 6977.46 |
+| Informer + CBAM | 0.86 | 0.69 | 103.49 | 1225.07 | 1.74 | 2021.42 |
+| Spatio-Temporal CBAM Attention | 0.84 | 0.67 | 106.31 | 1118.42 | 2.84 | 1689.15 |
+
 
 
 
