@@ -43,17 +43,19 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
       1. Crime dataset (Chicago Open Data Portal): https://drive.google.com/file/d/1KZzHzDKm8kTE5amHTQDOmHRVMD3rN_qW/view?usp=drive_link
       2. Weather data (NOAA/Chicago): https://docs.google.com/spreadsheets/d/15jJ3_ix0WoLxUaaCUEXZvB8Gi0Yiv98I/edit?usp=drive_link&ouid=118004913183445890400&rtpof=true&sd=true
          
-         
-### Results Summary 
 
-| Model | RMSE | MAE | Latency (ms/pred) | Throughput (pred/s) | Execution Time (s) | Memory (MB) |
-|:--|--:|--:|--:|--:|--:|--:|
-| LSTM | 0.85 | 0.68 | 67.21 | 4078.34 | 0.41 | 6864.65 |
-| BiLSTM | 0.88 | 0.69 | 77.18 | 1309.10 | 1.10 | 6993.42 |
-| BiGRU | 0.85 | 0.68 | 74.79 | 1301.67 | 1.76 | 6923.67 |
-| BiLSTM + Attention | 0.84 | 0.68 | 74.06 | 1738.61 | 1.40 | 6977.46 |
-| Informer + CBAM | 0.86 | 0.69 | 103.49 | 1225.07 | 1.74 | 2021.42 |
-| Spatio-Temporal CBAM Attention | 0.84 | 0.67 | 106.31 | 1118.42 | 2.84 | 1689.15 |
+
+###  Results Summary
+
+| **Model** | **MSE** | **RMSE** | **MAE** | **Latency (ms/pred)** | **Throughput (pred/s)** | **Execution Time (s)** | **Memory (MB)** |
+|------------|----------|----------|----------|-------------------------|--------------------------|--------------------------|------------------|
+| **LSTM** | 0.8670 | 0.85 | 0.68 | 67.21 | 4078.34 | 0.41 | 6864.65 |
+| **BiLSTM** | 0.7589 | 0.88 | 0.69 | 77.18 | 1309.10 | 1.10 | 6993.42 |
+| **BiGRU** | 0.7238 | 0.85 | 0.68 | 74.79 | 1301.67 | 1.76 | 6923.67 |
+| **BiLSTM + Attention** | 0.7174 | 0.84 | 0.68 | 74.06 | 1738.61 | 1.40 | 6977.46 |
+| **Informer + CBAM** | 0.7288 | 0.86 | 0.69 | 103.49 | 1225.07 | 1.74 | 2021.42 |
+| **Spatio-Temporal CBAM Attention** | 0.7206 | 0.84 | 0.67 | 106.31 | 1118.42 | 2.84 | 1689.15 |
+
 
 
 
