@@ -16,8 +16,7 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
     
         1. LSTM, BiLSTM, BiGRU
         2. BiLSTM + Attention (temporal attention)
-        3. BiLSTM + CBAM + Informer (sparse attention for long sequences + channel/spatial attention)
-        4. Spatio-Temporal CBAM Attention
+        3. Spatio-Temporal CBAM Attention
     
   - Evaluation:
     
@@ -47,14 +46,14 @@ Scope: The work intentionally focuses on one community area (Area 28) and one cr
 
 ###  Results Summary
 
-| **Model** | **MSE** | **RMSE** | **MAE** | **Latency (ms/pred)** | **Throughput (pred/s)** | **Execution Time (s)** | **Memory (MB)** |
-|------------|----------|----------|----------|-------------------------|--------------------------|--------------------------|------------------|
-| **LSTM** | 0.8670 | 0.85 | 0.68 | 67.21 | 4078.34 | 0.41 | 6864.65 |
-| **BiLSTM** | 0.7589 | 0.88 | 0.69 | 77.18 | 1309.10 | 1.10 | 6993.42 |
-| **BiGRU** | 0.7238 | 0.85 | 0.68 | 74.79 | 1301.67 | 1.76 | 6923.67 |
-| **BiLSTM + Attention** | 0.7174 | 0.84 | 0.68 | 74.06 | 1738.61 | 1.40 | 6977.46 |
-| **Informer + CBAM** | 0.7288 | 0.86 | 0.69 | 103.49 | 1225.07 | 1.74 | 2021.42 |
-| **Spatio-Temporal CBAM Attention** | 0.7206 | 0.84 | 0.67 | 106.31 | 1118.42 | 2.84 | 1689.15 |
+| Model                     | MSE     | RMSE   | MAE    | Latency (ms/pred) | Throughput (pred/s) | Test Prediction Time (s) | 7-Day Forecast Time (s) | Memory (MB) |
+|---------------------------|---------|--------|--------|---------------------|-----------------------|----------------------------|---------------------------|-------------|
+| LSTM                      | 0.7477  | 0.8647 | 0.6959 | 112.89              | 2801                  | 0.588                      | 0.7179                    | 1946        |
+| BiLSTM                    | 0.7626  | 0.8733 | 0.6850 | 102.37              | 1839                  | 1.481                      | 0.6626                    | 2033        |
+| BiGRU                     | 0.7279  | 0.8531 | 0.6869 | 106.93              | 1239                  | 1.617                      | 0.9254                    | 2099        |
+| BiLSTM + Attention        | 0.7046  | 0.8394 | 0.6718 | 98.75               | 1378                  | 1.508                      | 0.8552                    | 2194        |
+| BiLSTM + CBAM (ST-Attn)   | 0.7036  | 0.8388 | 0.6685 | 101.39              | 711                   | 2.831                      | 0.6082                    | 2079        |
+
 
 
 
